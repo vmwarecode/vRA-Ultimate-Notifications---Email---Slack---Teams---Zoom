@@ -1,0 +1,17 @@
+# ABX Flow: Ultimate Notifications
+# Created by Guillermo Martinez and Dennis Gerolymatos 
+# Version 1.0 - 22.12.2021
+---
+version: 1
+flow:
+  flow_start:
+    next: action1
+  action1:
+    action: Get vRA Token
+    next: action2
+  action2:
+    action: Send to Email
+    next: action3
+  action3:
+    action: Send to App Webhook
+    next: flow_end
